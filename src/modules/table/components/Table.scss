@@ -1,0 +1,111 @@
+$baseColor: #398B93;
+$borderRadius: 10px;
+$imageBig: 100px;
+$imageSmall: 60px;
+$padding: 20px;
+
+.table-users {
+    border: 1px solid #87d9e1;
+    border-radius: $borderRadius;
+    max-width: calc(100% - 2em);
+    overflow: auto;
+    width: 1000px;
+    height: 500px;
+    display: block;
+}
+
+table {
+    width: 100%;
+    position: relative;
+
+    thead {
+        // position: fixed;
+    }
+
+    tbody {
+        tr> :nth-child(2) {
+            text-align: unset;
+        }
+    }
+
+    tr> :nth-child(2) {
+        width: 1000px;
+    }
+
+    td,
+    th {
+        color: darken($baseColor, 10%);
+        padding: $padding;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+
+
+        &:last-child {
+            font-size: 0.95em;
+            line-height: 1.4;
+            text-align: left;
+        }
+    }
+
+    th {
+        background-color: lighten($baseColor, 30%);
+        font-weight: 500;
+        color: darken($baseColor, 20%);
+        font-size: 18px;
+
+    }
+
+    tr {
+        font-weight: 500;
+
+        &:nth-child(2n) {
+            background-color: white;
+        }
+
+        &:nth-child(2n+1) {
+            background-color: lighten($baseColor, 52%)
+        }
+    }
+}
+
+.button-delete {
+    color: red;
+    font-weight: 500;
+    cursor: pointer;
+
+
+
+    svg {
+        margin: auto;
+        width: 30px;
+        display: block;
+    }
+}
+
+
+
+.completed {
+    display: inline-block;
+    padding: 15px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #dcfce7;
+    color: #22c55e;
+    width: 80px;
+}
+
+.rejected {
+    display: inline-block;
+    padding: 15px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #fee2e2;
+    width: 80px;
+    color: #ef4444;
+}
